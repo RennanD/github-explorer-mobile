@@ -32,6 +32,9 @@ export function Dashboard() {
      * - call addRepository function sending inputText value;
      * - clean inputText value.
      */
+
+    addRepository(inputText)
+    setInputText('')
     inputRef.current?.blur();
   }
 
@@ -62,6 +65,7 @@ export function Dashboard() {
                * changes:
                * onChangeText={YOUR CODE HERE}
                */
+              onChangeText={setInputText}
               onSubmitEditing={handleAddRepository}
               returnKeyType="send"
               autoCapitalize='none'
